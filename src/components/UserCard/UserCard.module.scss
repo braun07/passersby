@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  animation: card-in 0.35s ease-out both;
+}
+
+.photo {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--paper-deep);
+}
+
+.info {
+  min-width: 0;
+  width: 100%;
+}
+
+.info h2 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.place {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.mail {
+  display: inline-block;
+  max-width: 100%;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+
+  &:hover {
+    color: var(--accent-hover);
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
